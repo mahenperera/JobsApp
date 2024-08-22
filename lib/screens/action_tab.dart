@@ -27,7 +27,7 @@ class _ActionTabState extends State<ActionTab> {
           options: Options(headers: {
             "Content-Type": "application/json",
             "ChannelId": "2",
-            "ClientSecret": ""
+            "ClientSecret": "" //Add ClientSecret
           }));
       if (response.statusCode == 200) {
         setState(() {

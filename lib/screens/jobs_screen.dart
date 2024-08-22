@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:jobs_app/screens/login_screen.dart';
 import 'action_tab.dart';
 
-class JobsScreen extends StatefulWidget {
+class JobsScreen extends StatelessWidget {
   final String userid;
   const JobsScreen({super.key, required this.userid});
 
-  @override
-  State<JobsScreen> createState() => _JobsScreenState();
-}
-
-class _JobsScreenState extends State<JobsScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -72,7 +67,7 @@ class _JobsScreenState extends State<JobsScreen> {
                 child: TabBarView(
                   children: [
                     ActionTab(
-                      actUserid: widget.userid,
+                      actUserid: userid,
                     ),
                     const Center(child: Text("FOLLOW UP Tab")),
                     const Center(child: Text("REVIEW Tab")),
